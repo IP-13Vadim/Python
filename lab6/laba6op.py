@@ -1,3 +1,6 @@
+n = 0
+
+
 def sum_div(num):
     sum = 0
     for i in range(1, num // 2 + 1):
@@ -8,11 +11,13 @@ def sum_div(num):
 
 
 def init():
+    global n
     n = int(input('n: '))
-    return n
 
 
-def solution(n):
+def solution():
+    global n
+
     for i in range(1, n+1):
         a = sum_div(i)
         b = sum_div(a)
@@ -26,5 +31,6 @@ def browse(num1, num2):
 
 
 if __name__ == '__main__':
-    solution(init())
+    init()
+    solution()
 
